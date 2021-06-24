@@ -59,6 +59,22 @@ namespace tinyQuest
                         "http://localhost:8080", "http://localhost:8081"
                     });
                 });
+                // TODO Transient Repositories
+            services.AddTransient<ProfilesRepository>();
+            services.AddTransient<RacesRepository>();
+            services.AddTransient<CareersRepository>();
+            services.AddTransient<HeroesRepository>();
+            services.AddTransient<PartiesRepository>();
+
+
+
+            // TODO Transient Services
+            services.AddTransient<ProfilesService>();
+            services.AddTransient<RacesService>();
+            services.AddTransient<CareersService>();
+            services.AddTransient<HeroesService>();
+            services.AddTransient<PartiesService>();
+
             });
         }
 
