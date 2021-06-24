@@ -1,4 +1,4 @@
- using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -17,7 +17,7 @@ using MySqlConnector;
 using tinyQuest.Repositories;
 using tinyQuest.Services;
 
-namespace tinyQuest
+namespace tinyQuest_server
 {
     public class Startup
     {
@@ -31,35 +31,42 @@ namespace tinyQuest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            ConfigureCors(services);
-            ConfigureAuth(services);
-            services.AddControllers();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "tinyQuest", Version = "v1" });
             });
-            services.AddScoped<IDbConnection>(x => CreateDbConnection());
-            
-            services.AddScoped<AccountsRepository>();
-            services.AddScoped<AccountService>();
-        }
 
-        private void ConfigureCors(IServiceCollection services)
-        {
+
+            // REVIEW[epic=Authentication] creates functionality for authentication
+            services.AddAuthentication(options =>
+              {
+                  options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                  options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+              }).AddJwtBearer(options =>
+              {
+                  options.Authority = $"https://{Configuration["Auth0:Domain"]}/";
+                  options.Audience = Configuration["Auth0:Audience"];
+              });
+
+
             services.AddCors(options =>
-            {
-                options.AddPolicy("CorsDevPolicy", builder =>
+              {
+                  options.AddPolicy("CorsDevPolicy", builder =>
                 {
-                    builder
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials()
-                    .WithOrigins(new string[]{
-                        "http://localhost:8080", "http://localhost:8081"
+                        builder
+                            .WithOrigins(new string[]{
+                            "http://localhost:8080",
+                            "http://localhost:8081"
+                                })
+                            .AllowAnyMethod()
+                            .AllowAnyHeader()
+                            .AllowCredentials();
                     });
-                });
-                // TODO Transient Repositories
+              });
+
+            // TODO Transient Repositories
             services.AddTransient<ProfilesRepository>();
             services.AddTransient<RacesRepository>();
             services.AddTransient<CareersRepository>();
@@ -75,29 +82,16 @@ namespace tinyQuest
             services.AddTransient<HeroesService>();
             services.AddTransient<PartiesService>();
 
-            });
-        }
 
-        private void ConfigureAuth(IServiceCollection services)
-        {
-            services.AddAuthentication(options =>
-            {
-                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-            }).AddJwtBearer(options =>
-            {
-                options.Authority = $"https://{Configuration["AUTH0_DOMAIN"]}/";
-                options.Audience = Configuration["AUTH0_AUDIENCE"];
-            });
+            services.AddScoped<IDbConnection>(x => CreateDbConnection());
 
         }
 
         private IDbConnection CreateDbConnection()
         {
-            string connectionString = Configuration["CONNECTION_STRING"];
+            var connectionString = Configuration["db:gearhost"];
             return new MySqlConnection(connectionString);
         }
-
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -107,20 +101,20 @@ namespace tinyQuest
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "tinyQuest v1"));
+
                 app.UseCors("CorsDevPolicy");
+
             }
 
             app.UseHttpsRedirection();
-            
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
-            
+
             app.UseRouting();
 
             app.UseAuthentication();
 
             app.UseAuthorization();
-
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {

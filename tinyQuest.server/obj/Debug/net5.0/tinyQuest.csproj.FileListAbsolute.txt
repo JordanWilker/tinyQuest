@@ -38,3 +38,4 @@ C:\source\codeworks\tinyQuest\tinyQuest.server\obj\Debug\net5.0\tinyQuest.dll
 C:\source\codeworks\tinyQuest\tinyQuest.server\obj\Debug\net5.0\ref\tinyQuest.dll
 C:\source\codeworks\tinyQuest\tinyQuest.server\obj\Debug\net5.0\tinyQuest.pdb
 C:\source\codeworks\tinyQuest\tinyQuest.server\obj\Debug\net5.0\tinyQuest.genruntimeconfig.cache
+C:\source\codeworks\tinyQuest\tinyQuest.server\bin\Debug\net5.0\appsettings.json
