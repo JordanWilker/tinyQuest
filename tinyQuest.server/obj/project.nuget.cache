@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ib7zodnQM+q2dR9vKCccthBZhDHg42RZFLyMW6wSDPk3K7vs0tPkLEg2p38PbfJ6C4o1j2jSjDBt26HaHpKI/g==",
+  "dgSpecHash": "jljlLGBg5CzyMhpT7fpaL4O9rUxpM72w2yQO/Lvq76wW2LSEn1zbaxy0ePnM7R7Y8TrTZnrn4vTo2hoBC2Q8iw==",
   "success": true,
-  "projectFilePath": "c:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj",
+  "projectFilePath": "C:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gryph\\.nuget\\packages\\codeworks.auth0provider\\1.0.3\\codeworks.auth0provider.1.0.3.nupkg.sha512",
     "C:\\Users\\Gryph\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",

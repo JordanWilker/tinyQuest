@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj": {}
+    "C:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj": {}
   },
   "projects": {
-    "c:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj": {
+    "C:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj",
+        "projectUniqueName": "C:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj",
         "projectName": "tinyQuest",
-        "projectPath": "c:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj",
+        "projectPath": "C:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj",
         "packagesPath": "C:\\Users\\Gryph\\.nuget\\packages\\",
-        "outputPath": "c:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\obj\\",
+        "outputPath": "C:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gryph\\AppData\\Roaming\\NuGet\\NuGet.Config"
