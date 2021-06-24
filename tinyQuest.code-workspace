@@ -6,7 +6,7 @@
       "name": "client"
     },
     {
-      "path": "tinyQuest",
+      "path": "tinyQuest.server",
       "name": "server"
     }
   ],

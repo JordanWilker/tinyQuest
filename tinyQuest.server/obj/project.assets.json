@@ -25,7 +25,7 @@
           "lib/net5.0/Dapper.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.0": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.7": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.7.1"
@@ -237,7 +237,7 @@
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
         }
       },
-      "MySqlConnector/1.3.8": {
+      "MySqlConnector/1.3.10": {
         "type": "package",
         "compile": {
           "lib/net5.0/MySqlConnector.dll": {}
@@ -379,10 +379,10 @@
         "lib/netstandard2.0/Dapper.xml"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.0": {
-      "sha512": "26WlfJsOB4QP3VsEVu5GGDSGm5wu6ikQqRUOaZ3BUmyGcMWsD28xFxPxFw4OszYgKpj54QYlyec19KcrEGkqDw==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.7": {
+      "sha512": "80zYklKE6CZZswm5zjCUNbDx2Pavt45qfmVWLY1Heoe7GiJsPGGs9odgmsUFZ75bq4D6F4ZwK0LOam1TGUlHCg==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/5.0.0",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/5.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -390,7 +390,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
         "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.5.0.7.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
@@ -724,10 +724,10 @@
         "microsoft.openapi.nuspec"
       ]
     },
-    "MySqlConnector/1.3.8": {
-      "sha512": "zxE+MDrpfPLEUvkUR73brSLiWwDtp5yoNmEk5vEj0vzoVJmR2lBJcOPowigbkR305lM2IKgCL8TP1iIC9xSi7A==",
+    "MySqlConnector/1.3.10": {
+      "sha512": "geL3pNiwbSXzUqQLHLm2/igDHuz5Q4qqp2rKczYoIHtdvvrsd5fnYHN8eFgP81qu77Blv0+0IOn69RJATNQoSQ==",
       "type": "package",
-      "path": "mysqlconnector/1.3.8",
+      "path": "mysqlconnector/1.3.10",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -751,7 +751,7 @@
         "lib/netstandard2.1/MySqlConnector.dll",
         "lib/netstandard2.1/MySqlConnector.xml",
         "logo.png",
-        "mysqlconnector.1.3.8.nupkg.sha512",
+        "mysqlconnector.1.3.10.nupkg.sha512",
         "mysqlconnector.nuspec"
       ]
     },
@@ -953,9 +953,9 @@
     "net5.0": [
       "CodeWorks.Auth0Provider >= 1.0.3",
       "Dapper >= 2.0.90",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.0",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.7",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 5.0.0",
-      "MySqlConnector >= 1.3.8",
+      "MySqlConnector >= 1.3.10",
       "Swashbuckle.AspNetCore >= 5.6.3"
     ]
   },
@@ -965,11 +965,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\source\\codeworks\\tinyQuest\\tinyQuest\\tinyQuest.csproj",
+      "projectUniqueName": "c:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj",
       "projectName": "tinyQuest",
-      "projectPath": "C:\\source\\codeworks\\tinyQuest\\tinyQuest\\tinyQuest.csproj",
+      "projectPath": "c:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj",
       "packagesPath": "C:\\Users\\Gryph\\.nuget\\packages\\",
-      "outputPath": "C:\\source\\codeworks\\tinyQuest\\tinyQuest\\obj\\",
+      "outputPath": "c:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gryph\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1006,10 +1006,7 @@
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
-            "version": "[5.0.0, )",
-            "noWarn": [
-              "NU1605"
-            ]
+            "version": "[5.0.7, )"
           },
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
             "target": "Package",
@@ -1020,7 +1017,7 @@
           },
           "MySqlConnector": {
             "target": "Package",
-            "version": "[1.3.8, )"
+            "version": "[1.3.10, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
