@@ -9,7 +9,6 @@ C:\source\codeworks\tinyQuest\tinyQuest.server\bin\Debug\net5.0\tinyQuest.pdb
 C:\source\codeworks\tinyQuest\tinyQuest.server\bin\Debug\net5.0\CodeWorks.Auth0Provider.dll
 C:\source\codeworks\tinyQuest\tinyQuest.server\bin\Debug\net5.0\Dapper.dll
 C:\source\codeworks\tinyQuest\tinyQuest.server\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-C:\source\codeworks\tinyQuest\tinyQuest.server\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 C:\source\codeworks\tinyQuest\tinyQuest.server\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\source\codeworks\tinyQuest\tinyQuest.server\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
 C:\source\codeworks\tinyQuest\tinyQuest.server\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll

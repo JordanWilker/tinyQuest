@@ -17,7 +17,7 @@ using MySqlConnector;
 using tinyQuest.Repositories;
 using tinyQuest.Services;
 
-namespace tinyQuest_server
+namespace tinyQuest
 {
     public class Startup
     {

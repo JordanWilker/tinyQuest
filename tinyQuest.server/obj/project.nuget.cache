@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "jljlLGBg5CzyMhpT7fpaL4O9rUxpM72w2yQO/Lvq76wW2LSEn1zbaxy0ePnM7R7Y8TrTZnrn4vTo2hoBC2Q8iw==",
+  "dgSpecHash": "u4JmvOzsM/5XXntRZHYienL8sXucNkdwZXW0nmyYL9TmDEnYa6mfmQPMuOXt7q8RPa0VRL+sVTJ0PGcqxl6pGA==",
   "success": true,
   "projectFilePath": "C:\\source\\codeworks\\tinyQuest\\tinyQuest.server\\tinyQuest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gryph\\.nuget\\packages\\codeworks.auth0provider\\1.0.3\\codeworks.auth0provider.1.0.3.nupkg.sha512",
     "C:\\Users\\Gryph\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
     "C:\\Users\\Gryph\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.7\\microsoft.aspnetcore.authentication.jwtbearer.5.0.7.nupkg.sha512",
-    "C:\\Users\\Gryph\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\5.0.0\\microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",
     "C:\\Users\\Gryph\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Gryph\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Gryph\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

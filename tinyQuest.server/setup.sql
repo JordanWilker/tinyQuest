@@ -1,0 +1,67 @@
+CREATE TABLE profiles (
+  id VARCHAR(255) NOT NULL,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  email VARCHAR(255) NOT NULL,
+  name VARCHAR(255),
+  picture VARCHAR(255),
+  creator VARCHAR(255),
+  PRIMARY KEY (id)
+);
+CREATE TABLE race (
+  id INT AUTO_INCREMENT,
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  creatorId VARCHAR(255),
+  name VARCHAR(255),
+  healthMod INT,
+  rangeMod INT,
+  magicMod INT,
+  swordMod INT,
+  PRIMARY KEY(id),
+  FOREIGN KEY(creatorId) REFERENCES profiles(id) ON DELETE CASCADE
+);
+CREATE TABLE career (
+  id INT AUTO_INCREMENT,
+  creatorId VARCHAR(255),
+  createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updatedAt DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  name VARCHAR(255),
+  healthMod INT,
+  rangeMod INT,
+  magicMod INT,
+  swordMod INT,
+  PRIMARY KEY(id),
+  FOREIGN KEY(creatorId) REFERENCES profiles(id) ON DELETE CASCADE
+);
+CREATE TABLE hero (
+  id INT AUTO_INCREMENT,
+  raceId INT,
+  careerId INT,
+  creatorId VARCHAR (255),
+  name VARCHAR (255),
+  health INT,
+  rangePower INT,
+  magicPower INT,
+  swordPower INT,
+  PRIMARY KEY (id),
+  FOREIGN KEY (creatorId) REFERENCES profiles(id) ON DELETE CASCADE 
+);
+CREATE TABLE party (
+  id INT AUTO_INCREMENT,
+  hero1Id INT,
+  hero2Id INT,
+  hero3Id INT,
+  hero4Id INT,
+  creatorId VARCHAR (255),
+  PRIMARY KEY (id),
+  FOREIGN KEY (creatorId) REFERENCES profiles(id) ON DELETE CASCADE 
+);
+DROP TABLE profiles;
+DROP TABLE race;
+DROP TABLE career;
+DROP TABLE hero;
+DROP TABLE party;
+
+
+

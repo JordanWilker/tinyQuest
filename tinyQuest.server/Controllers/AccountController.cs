@@ -1,33 +1,42 @@
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
-using tinyQuest.Models;
-using tinyQuest.Services;
 using CodeWorks.Auth0Provider;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using tinyQuest.Models;
+using tinyQuest.Services;
+using System.Collections.Generic;
 
 namespace tinyQuest.Controllers
 {
+
+
+
     [ApiController]
     [Route("[controller]")]
+
+    // REVIEW this tag enforces the user must be logged in
+    [Authorize]
     public class AccountController : ControllerBase
     {
-        private readonly AccountService _accountService;
+        private readonly ProfilesService _pservice;
 
-        public AccountController(AccountService accountService)
+        public AccountController(ProfilesService pservice)
         {
-            _accountService = accountService;
+            _pservice = pservice;
         }
 
         [HttpGet]
-        [Authorize]
-        public async Task<ActionResult<Account>> Get()
+        // REVIEW async calls must return a System.Threading.Tasks, this is equivalent to a promise in JS
+        public async Task<ActionResult<Profile>> GetAsync()
         {
             try
             {
-                Account userInfo = await HttpContext.GetUserInfoAsync<Account>();
-                return Ok(_accountService.GetOrCreateProfile(userInfo));
+                // REVIEW how to get the user info from the request token
+                // same as to req.userInfo
+                //MAKE SURE TO BRING IN codeworks.auth0provider
+                Profile userInfo = await HttpContext.GetUserInfoAsync<Profile>();
+                return Ok(_pservice.GetOrCreateProfile(userInfo));
             }
             catch (Exception e)
             {
@@ -35,6 +44,5 @@ namespace tinyQuest.Controllers
             }
         }
     }
-
-
 }
+
