@@ -68,6 +68,7 @@ namespace tinyQuest.Controllers
         Profile userInfo = await HttpContext.GetUserInfoAsync<Profile>();
         newHero.creatorId = userInfo.Id;
         newHero.Creator = userInfo;
+        newHero.name = careerInfo.name;
         newHero.raceId = raceInfo.Id;
         newHero.careerId = careerInfo.Id;
         newHero.health = raceInfo.healthMod + careerInfo.healthMod;

@@ -1,7 +1,7 @@
 <template>
   <div class="component">
     nani?????
-    <button type="button" class="btn btn-primary" @click="createParty()">
+    <button type="button" class="btn btn-primary" @click="createParty(1)">
       Create Party
     </button>
   </div>
@@ -13,8 +13,8 @@ export default {
   name: 'Component',
   setup() {
     return {
-      createParty() {
-        partiesService.createParty()
+      createParty(data) {
+        partiesService.createParty(data)
       }
     }
   },

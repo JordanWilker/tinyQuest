@@ -19,14 +19,14 @@ class PartiesService {
     logger.log(res.status)
   }
 
-  async createParty() {
+  async createParty(body) {
     try {
-      const party = await api.post('api/heroes')
+      const party = await api.post('api/heroes', body)
       // await api.post('api/heroes')
       // await api.post('api/heroes')
       // await api.put('api/parties/' + party.id, { hero1Id: `${hero1Info.id}`, hero2Id: `${hero2Info.id}` })
       // this.getParties()
-      logger.log(party.data)
+      logger.log(party)
     } catch (error) {
       logger.error(error)
     }
